@@ -23,6 +23,12 @@ script:
 
   # TODO: Add some form of real-world integration testing.
 
+before_deploy:
+
+  # Keep Lambda function size down by removing what we don't need.
+  - rm -rf node_modules && yarn --prod
+  - rm -rf tests .*rc.js .gitignore LICENSE package.json *.md *.lock
+
 deploy:
 
   on:
