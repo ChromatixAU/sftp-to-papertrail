@@ -43,6 +43,7 @@ deploy:
   role: "arn:aws:iam::300761597318:role/genericLambdaRole"
   runtime: "nodejs6.10"
   handler_name: "handler"
+  description: "Retrieves log files via SFTP, and logs new entries to Papertrail."
   access_key_id: "AKIAIY72BYOTX7AYCKAA"
   secret_access_key:
     secure: "HRe/p/2FCiAqCMIzjfYTpIPg0pt1a7GQw5Zj7eU9N1wN6UMC4SsrWnsd3HV2RZdAOA4jMkwnIcUmCvmrUdSa+7ZymdjZOZCIwAWUBRgCbH79oCqywqMUIQdqJdRBEQuSjMxkmuSINo0+xO4kA1Tg20mE6C2Y8z44F0hfVK9hHNwZADwrg/kmyNRSNZZHgvfNqF0WfRC49sC9V71AvywSnVyHGNc3Qv1f+fX38QJmEm5Pr8Po9A92WL7hga2FUi//ubrAEopXJpbXtjXiT/sfV8m4HFMRa3/+ivhHjNcVvHPiR3bzcKHvF+/6T+WnuwYsVXmST0mmWfqQ02D5YTx9n0jgYlpEwWmX5q1mj+cqdsINPNbQ5kRt2nY08Au6HZSZllnMyFZanx2a72v+zpOREKFEBoVmyZ05s1fJUo7z4WSEACDaKskk9eHuo6aM3LvXICQRyVN81CIYH/KW0/m19uK16C++v/osjjAWT1xLyI4ELEReyYDkkRhhpvhBTGGh9SBA4Wu97y6jyJQ0taIqqMgjhTTcCWfvWWWR64NlVndU9vn/aDVWfpNN0DRYcDLLE5Gr2r2XDnDfP+omKNgsKO0Y5IsH1gRxTSC4mRSl1vRp8GSA7L3r55XVzs4ATf/KMjoVdzrn8fhjUXctWQQPvruDpLgIuxoJEOEdYwis5rU="
