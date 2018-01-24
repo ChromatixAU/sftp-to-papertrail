@@ -27,10 +27,6 @@ const aws = require( 'aws-sdk' ),
 
 let s3;
 
-// Whether or not the function is being executed within an AWS Lambda environment.
-// @see http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html
-const isLambda = process.env.AWS_EXECUTION_ENV ? true : false; // eslint-disable-line no-process-env
-
 exports.handler = ( event, context, callback ) => {
 
   const config = getConfig(),
