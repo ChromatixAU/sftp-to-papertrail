@@ -26,10 +26,13 @@ script:
 before_deploy:
 
   # Keep Lambda function size down by removing what we don't need.
-  - yarn remove aws-sdk
-  - rm -rf node_modules
-  - yarn --prod
-  - rm -rf coverage tests .*rc.js .gitignore LICENSE package.json *.md *.lock
+  - if [ "$HAVE_WE_ALREADY_DONE_THIS" != "true" ]; then
+      yarn remove aws-sdk;
+      rm -rf node_modules;
+      yarn --prod;
+      rm -rf coverage tests .*rc.js .gitignore LICENSE package.json *.md *.lock;
+      export HAVE_WE_ALREADY_DONE_THIS=true
+    fi
 
 deploy:
 
