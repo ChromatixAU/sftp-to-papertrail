@@ -31,7 +31,7 @@ before_deploy:
       rm -rf node_modules;
       yarn --prod;
       rm -rf coverage tests .*rc.js .gitignore LICENSE package.json *.md *.lock;
-      export HAVE_WE_ALREADY_DONE_THIS=true
+      export HAVE_WE_ALREADY_DONE_THIS=true;
     fi
 
 deploy:
