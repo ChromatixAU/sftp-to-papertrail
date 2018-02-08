@@ -48,6 +48,7 @@ deploy:
     region: ap-southeast-2
     role: arn:aws:iam::300761597318:role/genericLambdaRole
     runtime: nodejs6.10
+    timeout: 120
     handler_name: handler
     description: Retrieves log files via SFTP, and logs new entries to Papertrail.
     access_key_id: AKIAIY72BYOTX7AYCKAA
@@ -64,6 +65,7 @@ deploy:
     region: ap-southeast-2
     role: arn:aws:iam::300761597318:role/genericLambdaRole
     runtime: nodejs6.10
+    timeout: 120
     handler_name: handler
     description: Retrieves log files via SFTP, and logs new entries to Papertrail.
     access_key_id: AKIAIY72BYOTX7AYCKAA
