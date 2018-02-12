@@ -11,8 +11,6 @@ env:
     - LAMBDA_TIMEOUT=120
     - LAMBDA_DESCRIPTION="Retrieves log files via SFTP, and logs new entries to Papertrail."
 
-    - STP_SFTP_PATH=logs/nginx-access.log,logs/nginx-error.log,logs/php-fpm-error.log,logs/php-slow.log
-
     # AWS_SECRET_ACCESS_KEY
     - secure: H3IOtsGE7Z/ONTlxqBqc0raByh1lfDIR9aa6XBB6xj8Ini4pltJsk9EcSLc+djxXwJl4EcdhOlOgdhVcWVd5EufsirBZuH92WlUxx0IBCDLC90eLHNuQUMWEZ03VEwhk2ws9X10KuLpEo8Xb+kN1vDVpAcrGe2RGqbFShNWjw0Flp0sZ2czKwyVvAWmyRKt8o3Zga9cedX9W51ngA6UpU+gXwcDgjvwGLsxr8lA44TOpctKw5umqI0TjUjszlk4GVbSrnLu0SMU9cswKOOuUPOqAbqLTpXbE4unNhnZP4zi+JIwViMdfPSDGKD7fjPgyxpTsPSdXuAW/um9+S+OjO59XAmtmAvCRXYjhkNDM+yQBS6XBOdWFBf57emBgfQ1YMjxly2qD/qxQA2kIhWiKjDQ0kRaBAHFYZEOQnL1PFSAPUFpyt1jlYmjQsY1T4lSiqHEqJOB0pSPJS+n+Vru1X8tdDYZZgvFjwnNvO9Seo81FADiVisPqF6fYwe7XXtycxrR/+ys4BY54W1Zm/+t4RhfcajbDLEkqTGAgakXzDLaAPZs1Ouf5DcT0X0SooMMopfBDeDsltEXdYc+Dkrtv67RNLJtVjosgFHckrFRmmuROKbzWI/jRGxpvmud3mVw1LEa7+sIhVZcVei9g6yxB82yScY2g7AVDNRLdxDi4VJg=
 
@@ -30,7 +28,7 @@ install: yarn
 
 script:
   - yarn lint
-  - yarn test
+  - yarn unit-tests
 
 before_deploy:
 
