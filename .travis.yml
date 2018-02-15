@@ -77,6 +77,22 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
 
+    - on:
+      branch: chromatix
+      skip_cleanup: true
+
+      provider: lambda
+      publish: true
+      function_name: sftpToPapertrail-sharrockPitman
+      region: $AWS_DEFAULT_REGION
+      role: $LAMBDA_ROLE
+      runtime: $LAMBDA_RUNTIME
+      timeout: $LAMBDA_TIMEOUT
+      handler_name: handler
+      description: $LAMBDA_DESCRIPTION
+      access_key_id: $AWS_ACCESS_KEY_ID
+      secret_access_key: $AWS_SECRET_ACCESS_KEY
+
 notifications:
   email: false
   webhooks:
